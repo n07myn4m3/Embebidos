@@ -1,0 +1,39 @@
+### System signals ###
+NET clk                         LOC = "P17";
+NET led                         LOC = "P12";
+NET reset                       LOC = "P132" | PULLUP;
+
+### Address Bus ###
+NET "address<13>"               LOC = "P24";
+NET "address<12>"               LOC = "P27";
+
+NET "address<11>"               LOC = "P29";
+NET "address<10>"               LOC = "P1";   #It is not routed in current PCB.
+NET "address<9>"                LOC = "P16";
+NET "address<8>"                LOC = "P21";
+
+NET "address<7>"                LOC = "P39";
+NET "address<6>"                LOC = "P40";
+NET "address<5>"                LOC = "P41";
+NET "address<4>"                LOC = "P43";
+
+NET "address<3>"                LOC = "P44";
+NET "address<2>"                LOC = "P45";
+NET "address<1>"                LOC = "P46";
+NET "address<0>"                LOC = "P47"; 
+
+### Data Bus ###
+NET "data_bus<7>"               LOC = "P143";
+NET "data_bus<6>"               LOC = "P142";
+NET "data_bus<5>"               LOC = "P141";
+NET "data_bus<4>"               LOC = "P140";
+NET "data_bus<3>"               LOC = "P139";
+NET "data_bus<2>"               LOC = "P138";
+NET "data_bus<1>"               LOC = "P137";
+NET "data_bus<0>"               LOC = "P7";
+
+### Control Bus ###
+NET "nwe"                       LOC = "P15";
+NET "nrd"                       LOC = "P23";
+NET "ncs"                       LOC = "P9";
+#NET "nwait"                     LOC = "P11";

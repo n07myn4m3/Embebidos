@@ -1,0 +1,36 @@
+NET clk   LOC = "P17";
+NET led   LOC = "P12";
+
+
+#ADDRESS BUS
+#NET "addr<13>" LOC = "P24";
+#NET "addr<12>" LOC = "P27";
+#NET "addr<11>" LOC = "P29";
+#NET "addr<10>" LOC = "P";    # NO SE RUTEO ESTA EN LA PLACA
+#NET "addr<9>"  LOC = "P16";
+#NET "addr<8>"  LOC = "P21";
+#NET "addr<7>"  LOC = "P39";
+#NET "addr<6>"  LOC = "P40";
+#NET "addr<5>"  LOC = "P41";
+#NET "addr<4>"  LOC = "P43";
+#NET "addr<3>"  LOC = "P44";
+#NET "addr<2>"  LOC = "P45";
+#NET "addr<1>"  LOC = "P46";
+#NET "addr<0>"  LOC = "P47"; 
+
+#DATA BUS
+#NET "sram_data<7>"  LOC = "P143";
+#NET "sram_data<6>"  LOC = "P142";
+#NET "sram_data<5>"  LOC = "P141";
+#NET "sram_data<4>"  LOC = "P140";
+#NET "sram_data<3>"  LOC = "P139";
+#NET "sram_data<2>"  LOC = "P138";
+#NET "sram_data<1>"  LOC = "P137";
+#NET "sram_data<0>"  LOC = "P7";
+
+#CONTROL BUS
+#NET "nwe"   LOC = "P15";
+#NET "nrd"   LOC = "P23";
+#NET "ncs"   LOC = "P9";
+#NET "nwait" LOC = "P11";
+

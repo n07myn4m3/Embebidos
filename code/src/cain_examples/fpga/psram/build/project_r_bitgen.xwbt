@@ -1,0 +1,7 @@
+INFILE=/home/nixtropy/Documents/Embebidos/stamp_repo/files/code/src/cain_examples/fpga/psram/build/project_r.ncd
+OUTFILE=/home/nixtropy/Documents/Embebidos/stamp_repo/files/code/src/cain_examples/fpga/psram/build/project_r.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=/home/nixtropy/Documents/Embebidos/stamp_repo/files/code/src/cain_examples/fpga/psram/build
+LICENSE=WebPack
+USER_INFO=210656542_0_0_533

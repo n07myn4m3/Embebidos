@@ -1,0 +1,2 @@
+sudo xc3sprog -c ftdi -v -p1 ../blink.bit
+sudo openocd -f rf_design.cfg 

@@ -1,0 +1,46 @@
+La plataforma tiene dos dispositivos en la cadena JTAG:
+1. FPGA XC6SLX9
+2. Procesador SAM3S
+
+Ambos son configurados y/o programados por el IMX, la FPGA es configurada por el xc3sprog utilizando el comando:
+xc3sprog -c imx283 -v -p1 blink.bit
+
+el SAM3S es programado por el openocd con el siguiente archivo de configuración:
+######################################################################
+interface imx283
+reset_config trst_and_srst                                                      
+adapter_khz 32
+
+jtag newtap xc6sxl9.fpga fpga \
+        -irlen 6 \
+        -ircapture 0x35 \
+        -irmask 0x3f \
+        -expected-id 0x24001093 
+
+
+jtag newtap sam3n.cpu cpu \
+        -irlen 4\
+        -ircapture 0x1\
+        -irmask 0xf \
+        -expected-id 0x4ba00477
+
+
+target create sam3n.cpu cortex_m -endian little  -chain-position 1 
+flash bank flash0 at91sam3 0x00400000 0 0 0 sam3n.cpu 
+#source at91sam3nXX.cfg
+init
+halt
+wait_halt                  
+sleep 10
+at91sam3 gpnvm set 1
+flash info 0
+flash probe 0                                                                   
+flash  write_bank   0 ch.bin  0                                               
+soft_reset_halt                                                                
+reset run                                                                       
+shutdown
+######################################################################
+
+Primero se debe configurar la FPGA para configurar la intefaz JTAG, si no se hace así los valores que lee openocd son diferentes
+
+
