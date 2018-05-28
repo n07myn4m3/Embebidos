@@ -1,0 +1,486 @@
+
+build/i2c.elf:     file format elf32-littlearm
+build/i2c.elf
+architecture: arm, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x004000d0
+
+Program Header:
+0x70000001 off    0x0000e058 vaddr 0x00406058 paddr 0x00406058 align 2**2
+         filesz 0x000000e8 memsz 0x000000e8 flags r--
+    LOAD off    0x00008000 vaddr 0x00400000 paddr 0x00400000 align 2**15
+         filesz 0x00006140 memsz 0x00006140 flags rwx
+    LOAD off    0x00010800 vaddr 0x20000800 paddr 0x00406140 align 2**15
+         filesz 0x0000086c memsz 0x0000086c flags rw-
+    LOAD off    0x00011070 vaddr 0x20001070 paddr 0x004069ac align 2**15
+         filesz 0x00000000 memsz 0x00000738 flags rw-
+    LOAD off    0x00018000 vaddr 0x20000000 paddr 0x20000000 align 2**15
+         filesz 0x00000000 memsz 0x00000800 flags rw-
+private flags = 5000202: [Version5 EABI] [soft-float ABI] [has entry point]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 startup       000000d0  00400000  00400000  00008000  2**4
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00005f70  004000d0  004000d0  000080d0  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .ARM.extab    00000018  00406040  00406040  0000e040  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .ARM.exidx    000000e8  00406058  00406058  0000e058  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .textalign    00000000  00406140  00406140  0001106c  2**0
+                  CONTENTS
+  5 .stacks       00000800  20000000  20000000  00018000  2**0
+                  ALLOC
+  6 .data         0000086c  20000800  00406140  00010800  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+  7 .bss          00000738  20001070  004069ac  00011070  2**3
+                  ALLOC
+  8 .debug_info   0000e687  00000000  00000000  0001106c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_abbrev 0000350c  00000000  00000000  0001f6f3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000046fb  00000000  00000000  00022bff  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_aranges 000007e8  00000000  00000000  000272fa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000b30  00000000  00000000  00027ae2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_line   00004838  00000000  00000000  00028612  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_str    000026a0  00000000  00000000  0002ce4a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .comment      00000070  00000000  00000000  0002f4ea  2**0
+                  CONTENTS, READONLY
+ 16 .ARM.attributes 00000031  00000000  00000000  0002f55a  2**0
+                  CONTENTS, READONLY
+ 17 .debug_frame  00002050  00000000  00000000  0002f58c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+00400000 l    d  startup	00000000 startup
+004000d0 l    d  .text	00000000 .text
+00406040 l    d  .ARM.extab	00000000 .ARM.extab
+00406058 l    d  .ARM.exidx	00000000 .ARM.exidx
+00406140 l    d  .textalign	00000000 .textalign
+20000000 l    d  .stacks	00000000 .stacks
+20000800 l    d  .data	00000000 .data
+20001070 l    d  .bss	00000000 .bss
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 vectors.c
+00000000 l    df *ABS*	00000000 main.cpp
+004034f0 l     F .text	0000004c _ZL14Acelero_ThreadPv
+00405f60 l     O .text	00000018 _ZL4pins
+200012c0 l     O .bss	000004b0 _ZL12Area_acelero
+00000000 l    df *ABS*	00000000 unwind-arm.c
+00400110 l     F .text	00000012 selfrel_offset31
+00400124 l     F .text	0000007a search_EIT_table
+004001a0 l     F .text	00000028 __gnu_unwind_get_pr_addr
+004001c8 l     F .text	000000a4 get_eit_entry
+0040026c l     F .text	00000058 restore_non_core_regs
+004002c4 l     F .text	0000000c _Unwind_decode_typeinfo_ptr.isra.0
+004002d0 l     F .text	00000004 __gnu_unwind_24bit.isra.1
+004002d4 l     F .text	00000002 _Unwind_DebugHook
+004002d8 l     F .text	0000003e unwind_phase2
+00400318 l     F .text	000000d8 unwind_phase2_forced
+00400504 l     F .text	0000001a _Unwind_GetGR
+00400554 l     F .text	0000001c _Unwind_SetGR
+004005e0 l     F .text	000002d4 __gnu_unwind_pr_common
+00000000 l    df *ABS*	00000000 libunwind.o
+00000000 l    df *ABS*	00000000 pr-support.c
+00400d20 l     F .text	00000038 next_unwind_byte
+00400d58 l     F .text	0000001a _Unwind_GetGR.constprop.0
+00400d74 l     F .text	00000002 unwind_UCB_from_context
+00000000 l    df *ABS*	00000000 lib_a-memcpy.o
+00000000 l    df *ABS*	00000000 _aeabi_uldivmod.o
+00000000 l    df *ABS*	00000000 bpabi.c
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+00000000 l    df *ABS*	00000000 libgcc2.c
+00000000 l    df *ABS*	00000000 libgcc2.c
+00000000 l    df *ABS*	00000000 crt0.c
+00000000 l    df *ABS*	00000000 chcore_v7m.c
+00401894 l       .text	00000000 _port_exit_from_isr
+00000000 l    df *ABS*	00000000 nvic.c
+00000000 l    df *ABS*	00000000 chsys.c
+20001070 l     O .bss	00000048 mainthread.4837
+00000000 l    df *ABS*	00000000 chvt.c
+00000000 l    df *ABS*	00000000 chschd.c
+00401ba0 l     F .text	00000058 wakeup
+00000000 l    df *ABS*	00000000 chthreads.c
+00000000 l    df *ABS*	00000000 chmtx.c
+00000000 l    df *ABS*	00000000 chevents.c
+00000000 l    df *ABS*	00000000 chqueues.c
+00401f20 l     F .text	0000002c qwait
+00000000 l    df *ABS*	00000000 chmemcore.c
+200011a8 l     O .bss	00000004 endmem
+200011ac l     O .bss	00000004 nextmem
+00000000 l    df *ABS*	00000000 chheap.c
+200011b0 l     O .bss	00000020 default_heap
+00000000 l    df *ABS*	00000000 hal.c
+00000000 l    df *ABS*	00000000 serial.c
+00402280 l     F .text	0000000a putwouldblock
+00402290 l     F .text	0000000a getwouldblock
+004022a0 l     F .text	00000016 getflags
+004022c0 l     F .text	00000006 readt
+004022d0 l     F .text	0000000a reads
+004022e0 l     F .text	00000006 writet
+004022f0 l     F .text	0000000a writes
+00402300 l     F .text	00000006 gett
+00402310 l     F .text	00000006 putt
+00405c90 l     O .text	00000024 vmt
+00000000 l    df *ABS*	00000000 hal_lld.c
+00000000 l    df *ABS*	00000000 system_SAM3.c
+00000000 l    df *ABS*	00000000 pal_lld.c
+00000000 l    df *ABS*	00000000 serial_lld.c
+004026d0 l     F .text	0000000c notify1
+004026e0 l     F .text	0000000c notify2
+004026f0 l     F .text	000000a2 serve_interrupt
+00405cc0 l     O .text	00000008 default_config
+00000000 l    df *ABS*	00000000 pio.c
+00000000 l    df *ABS*	00000000 pmc.c
+00405cd0 l     O .text	00000015 __func__.4792
+00000000 l    df *ABS*	00000000 atmel_twi.c
+00402aa0 l     F .text	0000001c TWI_WriteByte.part.0
+00405d30 l     O .text	0000000f __func__.4883
+00405d40 l     O .text	00000016 __func__.4915
+00405d60 l     O .text	00000014 __func__.4840
+00405d80 l     O .text	0000000d __func__.4897
+00405e80 l     O .text	00000009 __func__.4859
+00405e90 l     O .text	0000000d __func__.4870
+00405ea0 l     O .text	0000000e __func__.4866
+00405eb0 l     O .text	0000000e __func__.4875
+00000000 l    df *ABS*	00000000 atmel_twid.c
+00405ec0 l     O .text	0000000a __func__.4895
+00405f10 l     O .text	0000000b __func__.4917
+00000000 l    df *ABS*	00000000 board.c
+00000000 l    df *ABS*	00000000 syscalls.c
+00000000 l    df *ABS*	00000000 chprintf.c
+00403050 l     F .text	0000003e ltoa
+00000000 l    df *ABS*	00000000 abort.c
+00000000 l    df *ABS*	00000000 assert.c
+00000000 l    df *ABS*	00000000 fiprintf.c
+00000000 l    df *ABS*	00000000 memset.c
+00000000 l    df *ABS*	00000000 signal.c
+00000000 l    df *ABS*	00000000 signalr.c
+00000000 l    df *ABS*	00000000 vfprintf.c
+00403710 l     F .text	00000078 __sprint_r.part.0
+004043a0 l     F .text	0000007a __sbprintf
+00405ff0 l     O .text	00000010 zeroes.6869
+00406030 l     O .text	00000010 blanks.6868
+00000000 l    df *ABS*	00000000 wsetup.c
+00000000 l    df *ABS*	00000000 fflush.c
+00000000 l    df *ABS*	00000000 findfp.c
+00404680 l     F .text	000000f0 __sinit.part.1
+00000000 l    df *ABS*	00000000 fputwc.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 fvwrite.c
+00000000 l    df *ABS*	00000000 fwalk.c
+00000000 l    df *ABS*	00000000 locale.c
+20000c34 l     O .data	00000020 lc_ctype_charset
+00000000 l    df *ABS*	00000000 makebuf.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 memchr.c
+00000000 l    df *ABS*	00000000 memmove.c
+00000000 l    df *ABS*	00000000 mlock.c
+00000000 l    df *ABS*	00000000 mallocr.c
+00000000 l    df *ABS*	00000000 stdio.c
+00000000 l    df *ABS*	00000000 strlen.c
+00000000 l    df *ABS*	00000000 wbuf.c
+00000000 l    df *ABS*	00000000 wcrtomb.c
+00000000 l    df *ABS*	00000000 wctomb_r.c
+00000000 l    df *ABS*	00000000 fclose.c
+00000000 l    df *ABS*	00000000 impure.c
+20000808 l     O .data	00000428 impure_data
+00000000 l    df *ABS*	00000000 reent.c
+00000000 l    df *ABS*	00000000 
+00406140 l       .ARM.exidx	00000000 _etext
+00000800 l       *ABS*	00000000 __stacks_total_size__
+00000000 l       *UND*	00000000 SPI_PCS
+00008000 l       *ABS*	00000000 __ram_size__
+00000000 l       startup	00000000 _text
+20000000 l       startup	00000000 __ram_start__
+200017a8 l       .bss	00000000 _end
+00000400 l       *ABS*	00000000 __main_stack_size__
+00000400 l       *ABS*	00000000 __process_stack_size__
+00405f20 g     O .text	00000024 pal_default_config
+00400cd4 g     F .text	00000022 .hidden ___Unwind_ForcedUnwind
+004003f4 g     F .text	0000005e .hidden __gnu_Unwind_RaiseException
+00401880  w      .text	00000000 Vector58
+00401880  w      .text	00000000 Vector9C
+00403010 g     F .text	00000004 _isatty_r
+004019c0 g     F .text	00000048 nvicEnableVector
+00401ed0 g     F .text	0000002e chEvtSignalFlagsI
+004011f0 g     F .text	00000030 .hidden __gnu_uldivmod_helper
+00401880  w      .text	00000000 VectorAC
+00403020 g     F .text	00000004 _getpid
+00401eb0 g     F .text	0000000a chThdExit
+00401ac0 g     F .text	00000050 chSysTimerHandlerI
+00401f00 g     F .text	0000001e chEvtBroadcastFlagsI
+00401c80 g     F .text	00000044 chSchGoSleepTimeoutS
+00402fa0 g     F .text	00000004 _lseek_r
+00401230 g     F .text	000002aa .hidden __divdi3
+00401880  w      .text	00000000 Vector5C
+004036d0 g     F .text	00000028 _kill_r
+00401880  w      .text	00000000 NMIVector
+00405b70 g     F .text	00000054 _wcrtomb_r
+00405a30 g     F .text	00000020 __sseek
+00404770 g     F .text	0000000a __sinit
+00405ac0 g     F .text	000000a8 __swbuf_r
+004055d0 g     F .text	00000002 __malloc_unlock
+00401880  w      .text	00000000 Vector8C
+004028f0 g     F .text	00000152 PIO_Configure
+004054f0 g     F .text	000000c6 memmove
+00403410 g     F .text	00000060 _Z7I2CInitv
+00400b90 g     F .text	00000000 .hidden __gnu_Unwind_Save_VFP
+00400cb0 g     F .text	00000022 .hidden _Unwind_Resume_or_Rethrow
+00400000 g     O startup	000000d0 _vectors
+00406140 g       .ARM.exidx	00000000 __exidx_end
+00401c50 g     F .text	00000028 chSchGoSleepS
+004008b4 g     F .text	00000004 .hidden __aeabi_unwind_cpp_pr0
+00402e70 g     F .text	000000e8 TWID_Write
+0040106c g     F .text	0000000a .hidden _Unwind_GetRegionStart
+00402ce0 g     F .text	00000040 TWI_EnableIt
+00400cb0 g     F .text	00000022 .hidden ___Unwind_Resume_or_Rethrow
+200017a8 g       .bss	00000000 __heap_base__
+00402ff0 g     F .text	00000018 _fstat_r
+200017a4 g     O .bss	00000004 errno
+00400cf8 g     F .text	00000022 .hidden _Unwind_Backtrace
+00401880  w      .text	00000000 VectorC8
+00000000  w      *UND*	00000000 __cxa_begin_cleanup
+00400b70 g     F .text	00000018 .hidden __restore_core_regs
+00400bb0 g     F .text	00000000 .hidden __gnu_Unwind_Save_VFP_D_16_to_31
+00401cd0 g     F .text	0000005c chSchWakeupS
+00000000  w      *UND*	00000000 __cxa_call_unexpected
+00402390 g     F .text	0000004c sdIncomingDataI
+00402100 g     F .text	00000048 chOQGetI
+00401c00 g     F .text	00000018 _scheduler_init
+00402a50 g     F .text	00000050 PMC_EnablePeripheral
+00401dd0 g     F .text	00000080 chThdCreateStatic
+00401880  w      .text	00000000 Vector94
+00401880  w      .text	00000000 VectorA8
+004003f0 g     F .text	00000004 .hidden _Unwind_GetCFA
+004010a0 g     F .text	000000ec memcpy
+00401880  w      .text	00000000 VectorB4
+00400520 g     F .text	00000032 .hidden _Unwind_VRS_Set
+00404670 g     F .text	0000000c _cleanup_r
+00401190 g     F .text	00000000 .hidden __aeabi_uldivmod
+20001244 g     O .bss	00000074 SD2
+00401c20 g     F .text	0000002c chSchReadyI
+004000d0 g       startup	00000000 __fini_array_end
+20000800 g       .stacks	00000000 __main_thread_stack_end__
+20000800 g     O .data	00000004 SystemCoreClock
+00401b10 g     F .text	00000018 _vt_init
+00403660 g     F .text	00000056 _raise_r
+00402240 g     F .text	0000001c _heap_init
+00403550 g     F .text	0000003c __assert_func
+00401880  w      .text	00000000 Vector74
+00402260 g     F .text	0000001c halInit
+00404e40 g     F .text	00000008 __locale_charset
+20001070 g       .bss	00000000 _bss_start
+00402420 g     F .text	00000004 at91sam3_clock_init
+20001778 g     O .bss	00000004 __malloc_top_pad
+00401880  w      .text	00000000 UsageFaultVector
+00403700 g     F .text	00000004 _getpid_r
+20008000 g       *ABS*	00000000 __heap_end__
+00401880  w      .text	00000000 DebugMonitorVector
+00400570 g     F .text	00000070 .hidden __gnu_Unwind_Backtrace
+20000c54 g     O .data	00000004 __mb_cur_max
+00404ad0 g     F .text	00000320 __sfvwrite_r
+00401880  w      .text	00000000 Vector40
+00402fd0 g     F .text	00000018 _sbrk_r
+00402ac0 g     F .text	00000074 TWI_ConfigureMaster
+00401770 g     F .text	00000108 ResetHandler
+00402010 g     F .text	00000070 chIQReadTimeout
+00400ba0 g     F .text	00000000 .hidden __gnu_Unwind_Save_VFP_D
+00401880  w      .text	00000000 VectorBC
+00402f90 g     F .text	0000000a _read_r
+004008c0 g     F .text	000002a4 .hidden _Unwind_VRS_Pop
+00405bf0 g     F .text	00000084 _fclose_r
+004008bc  w    F .text	00000004 .hidden __aeabi_unwind_cpp_pr2
+004018c0 g     F .text	00000034 _port_init
+20001774 g     O .bss	00000004 __malloc_max_sbrked_mem
+00400cf8 g     F .text	00000022 .hidden ___Unwind_Backtrace
+004023e0 g     F .text	00000038 hal_lld_init
+00406058 g       .ARM.exidx	00000000 __exidx_start
+00401e70 g     F .text	00000040 chThdExitS
+004055e0 g     F .text	000003e0 _realloc_r
+004014e0 g     F .text	0000026e .hidden __udivdi3
+00400c68 g     F .text	00000022 .hidden ___Unwind_RaiseException
+00404850 g     F .text	00000024 _fputwc_r
+00403540 g     F .text	0000000e abort
+00400c8c g     F .text	00000022 .hidden ___Unwind_Resume
+00401880  w      .text	00000000 PendSVVector
+004034b0 g     F .text	00000038 _Z12I2CReadByteshhPhh
+00402d60 g     F .text	0000010c TWID_Read
+00400bb8 g     F .text	00000000 .hidden __gnu_Unwind_Restore_WMMXD
+00401b30 g     F .text	0000003c chVTSetI
+004027c0 g     F .text	00000014 Vector64
+200017a8 g       .bss	00000000 _bss_end
+00401760  w    F .text	00000002 _default_exit
+00402690 g     F .text	00000032 _pal_lld_setgroupmode
+00402b70 g     F .text	00000074 TWI_StartRead
+00401880  w      .text	00000000 VectorCC
+004027e0 g     F .text	00000058 sd_lld_init
+00401880  w      .text	00000000 Vector54
+00401880  w      .text	00000000 Vector98
+00401880  w      .text	00000000 Vector24
+00400b88 g     F .text	00000000 .hidden __gnu_Unwind_Restore_VFP
+00401d30 g     F .text	00000048 chSchDoReschedule
+00401a60 g     F .text	0000005c chSysInit
+00401e50 g     F .text	00000018 chThdSleep
+00401f50 g     F .text	0000001c chIQInit
+00401880  w      .text	00000000 Vector84
+00400c8c g     F .text	00000022 .hidden _Unwind_Resume
+00402c30 g     F .text	00000078 TWI_StartWrite
+004004c4 g     F .text	0000000c .hidden _Unwind_DeleteException
+004004c0 g     F .text	00000002 .hidden _Unwind_Complete
+00401980 g     F .text	0000001a SysTickVector
+00404780 g     F .text	00000002 __sfp_lock_acquire
+00405450 g     F .text	00000092 memchr
+004025d0 g     F .text	000000b8 _pal_lld_init
+00404920 g     F .text	000001b0 _free_r
+00404e50 g     F .text	0000000c __locale_mb_cur_max
+00402320 g     F .text	00000004 sdInit
+00401880  w      .text	00000000 BusFaultVector
+20001064 g     O .data	00000004 __malloc_sbrk_base
+004021d0 g     F .text	00000028 _core_init
+00402370 g     F .text	0000001a sdStart
+00400d78 g     F .text	000002cc .hidden __gnu_unwind_execute
+00401880  w      .text	00000000 VectorC0
+00400b98 g     F .text	00000000 .hidden __gnu_Unwind_Restore_VFP_D
+004019a0 g     F .text	00000010 _port_switch
+2000177c g     O .bss	00000028 __malloc_current_mallinfo
+004018a0 g     F .text	00000012 SVCallVector
+00401750  w    F .text	00000002 __late_init
+00000000  w      *UND*	00000000 __cxa_type_match
+20001178 g     O .bss	00000010 vtlist
+00401880  w      .text	00000000 HardFaultVector
+00401900 g     F .text	00000074 _port_irq_epilogue
+00400468 g     F .text	00000044 .hidden __gnu_Unwind_Resume
+00402200 g     F .text	00000038 chCoreAlloc
+00402fc0 g     F .text	00000004 _close_r
+00400ba8 g     F .text	00000000 .hidden __gnu_Unwind_Restore_VFP_D_16_to_31
+00404420 g     F .text	000000c4 __swsetup_r
+00402cc0 g     F .text	00000008 TWI_ByteSent
+00400c68 g     F .text	00000022 .hidden _Unwind_RaiseException
+00401220  w    F .text	00000002 .hidden __aeabi_ldiv0
+20000c58 g     O .data	00000408 __malloc_av_
+00402cd0 g     F .text	00000008 TWI_TransferComplete
+00406140 g       .ARM.exidx	00000000 _textdata
+004059c0 g     F .text	00000022 __sread
+00401880  w      .text	00000000 MemManageVector
+004055c0 g     F .text	00000002 __malloc_lock
+004000d0 g       startup	00000000 __fini_array_start
+00404640 g     F .text	0000002c _fflush_r
+00402bf0 g     F .text	00000024 TWI_ReadByte
+004035c0 g     F .text	0000009a memset
+004000d0 g     F .text	0000003c main
+00401880  w      .text	00000000 Vector6C
+20001770 g     O .bss	00000004 __malloc_max_total_mem
+20001188 g     O .bss	00000020 rlist
+00401880  w      .text	00000000 VectorA0
+00402b40 g     F .text	00000024 TWI_Stop
+00405a50 g     F .text	00000008 __sclose
+004000d0 g       startup	00000000 __init_array_end
+00404f40 g     F .text	0000050c _malloc_r
+00405bd0 g     F .text	0000001a __ascii_wctomb
+00401880  w      .text	00000000 VectorC4
+00401880  w      .text	00000000 Vector7C
+00401ec0 g     F .text	0000000a chMtxInit
+00401a40 g     F .text	00000014 _idle_thread
+00402150 g     F .text	00000080 chOQWriteTimeout
+00401880  w      .text	00000000 VectorB0
+00404880 g     F .text	0000009c _malloc_trim_r
+00400454 g     F .text	00000012 .hidden __gnu_Unwind_ForcedUnwind
+00403090 g     F .text	00000378 chprintf
+00401880  w      .text	00000000 Vector90
+004019b0 g     F .text	00000010 _port_thread_start
+00402530 g     F .text	00000094 SystemInit
+004027a0 g     F .text	00000014 Vector60
+004004ac g     F .text	00000014 .hidden __gnu_Unwind_Resume_or_Rethrow
+00401880  w      .text	00000000 Vector1C
+00000000  w      *UND*	00000000 __gnu_Unwind_Find_exidx
+00402d50 g     F .text	00000008 TWID_Initialize
+00400b70 g     F .text	00000018 .hidden restore_core_regs
+00400c54 g     F .text	00000000 .hidden __gnu_Unwind_Save_WMMXC
+00401880  w      .text	00000000 Vector48
+20000400 g       .stacks	00000000 __process_stack_base__
+00402fb0 g     F .text	00000004 _write_r
+00401094 g     F .text	00000006 .hidden _Unwind_GetTextRelBase
+20000c30 g     O .data	00000004 _impure_ptr
+00401880  w      .text	00000000 Vector70
+004044f0 g     F .text	00000148 __sflush_r
+00401a10 g     F .text	0000002a nvicSetSystemHandlerPriority
+200010b8 g     O .bss	000000c0 _idle_thread_wa
+00402080 g     F .text	0000001a chOQInit
+00401fc0 g     F .text	00000050 chIQGetTimeout
+20000800 g       .data	00000000 _data
+00401880  w      .text	00000000 Vector4C
+00401078 g     F .text	00000012 .hidden _Unwind_GetLanguageSpecificData
+00401880  w      .text	00000000 Vector80
+00401f70 g     F .text	0000004a chIQPutI
+00401890 g     F .text	00000006 _port_switch_from_isr
+00403470 g     F .text	00000034 _Z13I2CWriteByteshhh
+00401880  w      .text	00000000 Vector68
+004004d0 g     F .text	00000032 .hidden _Unwind_VRS_Get
+00400c40 g     F .text	00000000 .hidden __gnu_Unwind_Restore_WMMXC
+20000400 g       .stacks	00000000 __main_stack_end__
+00401880  w      .text	00000000 Vector78
+200012b8 g     O .bss	00000008 twid_
+00401044 g     F .text	00000028 .hidden __gnu_unwind_frame
+00400cd4 g     F .text	00000022 .hidden _Unwind_ForcedUnwind
+20008000 g       *ABS*	00000000 __ram_end__
+2000106c g       .data	00000000 _edata
+004047a0 g     F .text	000000ae __fputwc
+00401b70 g     F .text	00000024 chVTResetI
+00401880 g     F .text	00000002 _unhandled_exception
+00402330 g     F .text	00000040 sdObjectInit
+00402c20 g     F .text	0000000c TWI_WriteByte
+00401880  w      .text	00000000 Vector88
+004059f0 g     F .text	00000038 __swrite
+20001060 g     O .data	00000004 __malloc_trim_threshold
+00403590 g     F .text	00000028 fiprintf
+00403790 g     F .text	00000c10 _vfiprintf_r
+20000400 g       .stacks	00000000 __main_thread_stack_base__
+00404df0 g     F .text	00000050 _fwalk_reent
+00402430 g     F .text	000000f4 SystemCoreClockUpdate
+00400bfc g     F .text	00000000 .hidden __gnu_Unwind_Save_WMMXD
+00403040 g     F .text	00000006 _kill
+00404790 g     F .text	00000002 __sfp_lock_release
+00401220  w    F .text	00000002 .hidden __aeabi_idiv0
+004000d0 g       startup	00000000 __init_array_start
+00402cb0 g     F .text	00000008 TWI_ByteReceived
+00403030 g     F .text	00000002 _exit
+200011d0 g     O .bss	00000074 SD1
+00401d80 g     F .text	00000044 _thread_init
+00401880  w      .text	00000000 Vector50
+00404e60 g     F .text	000000e0 __smakebuf_r
+00405a60 g     F .text	0000005c strlen
+004008b8  w    F .text	00000004 .hidden __aeabi_unwind_cpp_pr1
+00402d20 g     F .text	00000028 TWI_SendSTOPCondition
+20001068 g     O .data	00000004 __wctomb
+004011c0 g     F .text	00000030 .hidden __gnu_ldivmod_helper
+004020a0 g     F .text	00000054 chOQPutTimeout
+20000000 g       .stacks	00000000 __main_stack_base__
+00401880  w      .text	00000000 Vector44
+00401880  w      .text	00000000 Vector28
+00402f70 g     F .text	00000020 boardInit
+0040108c g     F .text	00000006 .hidden _Unwind_GetDataRelBase
+00401880  w      .text	00000000 VectorB8
+00402840 g     F .text	000000a4 sd_lld_start
+20000800 g       .stacks	00000000 __process_stack_end__
+00401880  w      .text	00000000 Vector34
+00402f60 g     F .text	00000010 __early_init
+00401880  w      .text	00000000 VectorA4
+00401880  w      .text	00000000 Vector20
+004036c0 g     F .text	00000010 raise
+
+

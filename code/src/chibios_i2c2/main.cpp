@@ -104,6 +104,7 @@ static msg_t Thread1(void *arg) {
   return(0);
 }
 
+/*
 static WORKING_AREA(AreaGPS, 1024);
 
 static msg_t GPSThread(void *arg) {
@@ -172,6 +173,7 @@ static msg_t GPSThread(void *arg) {
       }
       return(0);
 }
+*/
 
 
 /*
@@ -187,6 +189,8 @@ int main(void) {
   //sdStart(&SD1, NULL);
   //Start I2C
   I2CInit();
+  uint8_t MPUbuffer[2];
+  int16_t x;
 
   // Creates threads
   chThdCreateStatic(waThread1, sizeof(waThread1), NORMALPRIO, Thread1, NULL);
@@ -194,7 +198,8 @@ int main(void) {
   //chThdCreateStatic(AreaGPS, sizeof(AreaGPS), ABSPRIO, GPSThread, NULL);
 
   while(true) {
-    I2CWriteBytes(0x68,0x6B,0);
+    I2CWriteBytes(0x68,0x6B,0); //Wake up MPU
+    I2CReadBytes(0x68,0x3B,MPUbuffer,2)
   }
 
 
