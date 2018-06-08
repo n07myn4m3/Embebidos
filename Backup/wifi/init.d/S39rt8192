@@ -1,0 +1,2 @@
+/sbin/insmod /lib/modules/8192cu.ko &
+/bin/sleep 8
